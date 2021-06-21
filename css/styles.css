@@ -145,14 +145,14 @@ body {
 
 /* СЕКЦИЯ SITE NAVIGATION */
 
-.page-header__nav {
+.header__nav {
   display: flex;
   align-items: center;
 }
-.site-nav__item:not(:last-child) {
+.header-nav__item:not(:last-child) {
   margin-right: 50px;
 }
-.site-nav__link {
+.header-nav__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -167,12 +167,12 @@ body {
   transition: color var(--time-cubic);
 }
 
-.site-nav__link:hover,
-.site-nav__link:focus {
+.header-nav__link:hover,
+.header-nav__link:focus {
   color: var(--accent-color);
 }
 
-.site-nav__link--current {
+.header-nav__link--current {
   position: relative;
   color: var(--accent-color);
 }
