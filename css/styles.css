@@ -104,7 +104,7 @@ body {
   border-bottom: 1px solid var(--header-line-color);
 }
 
-.page-header__content {
+.flex-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -126,33 +126,33 @@ body {
 
   transition: color var(--time-cubic);
 }
-.page-header__logo {
+.logo-paddings {
   padding-top: 24px;
   padding-bottom: 25px;
 }
 
-.logo__text--black {
+.logo-header {
   color: var(--primary-black-color);
 
   transition: color var(--time-cubic);
 }
 .logo:hover,
 .logo:focus,
-.logo__text--black:hover,
-.logo__text--black:focus {
+.logo-header:focus,
+.logo-header:hover {
   color: var(--accent-color);
 }
 
 /* СЕКЦИЯ SITE NAVIGATION */
 
-.header__nav {
+.site-nav {
   display: flex;
   align-items: center;
 }
-.header-nav__item:not(:last-child) {
+.site-nav .item:not(:last-child) {
   margin-right: 50px;
 }
-.header-nav__link {
+.site-nav .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -167,17 +167,17 @@ body {
   transition: color var(--time-cubic);
 }
 
-.header-nav__link:hover,
-.header-nav__link:focus {
+.site-nav .link:hover,
+.site-nav .link:focus {
   color: var(--accent-color);
 }
 
-.header-nav__link--current {
+.site-nav .link.current {
   position: relative;
   color: var(--accent-color);
 }
 
-.page-header__pseudo::after {
+.site-nav .pseudo::after {
   content: '';
   position: absolute;
   background-image: url(../images/icons/hover.svg);
@@ -383,8 +383,7 @@ body {
 .work-list-text {
   position: absolute;
   bottom: 0;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  height: 70px;
 
   width: 100%;
   display: flex;
@@ -790,11 +789,12 @@ body {
 .form .textarea-field {
   display: flex;
   flex-direction: column;
+
+  margin-bottom: 20px;
 }
 .form textarea {
   resize: none;
   padding: 12px 16px;
-  margin-bottom: 20px;
 
   border: 1px solid var(--input-textarea-border);
   border-radius: 4px;
@@ -809,7 +809,7 @@ body {
 }
 /* FORM CHECKBOX POLICY*/
 .form .policy-field {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
