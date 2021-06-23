@@ -67,7 +67,6 @@ body {
   margin-bottom: 50px;
 }
 
-
 .features__title {
   margin-bottom: 10px;
 
@@ -457,7 +456,6 @@ body {
   background-color: var(--primary-white-color);
 }
 
-
 .team-card__subtitle {
   color: var(--title-text-color);
   letter-spacing: 0.03em;
@@ -589,7 +587,6 @@ body {
   background-color: var(--footer-icons-bgr);
   color: var(--primary-white-color);
 }
-
 
 /* FOOTER FORM*/
 .footer-form {
@@ -836,7 +833,7 @@ body {
   height: 15px;
   border: 1px solid var(--title-text-color);
   border-radius: 2px;
-   margin-right: 7px;
+  margin-right: 7px;
 
   transition: border-color var(--time-cubic), background-color var(--time-cubic);
 }
@@ -907,15 +904,15 @@ body {
 
   margin-bottom: 50px;
 }
-.filter-buttons > .margin:not(:last-child) {
+.filter-buttons--gap:not(:last-child) {
   margin-right: 8px;
 }
-.filter-buttons .accent {
+.filter-buttons--accent {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
 
-.button.secondary {
+.filter-buttons__secondary {
   padding: 6px 22px;
 
   font-weight: 500;
@@ -926,8 +923,8 @@ body {
     box-shadow var(--time-cubic);
 }
 
-.filter-buttons .secondary:hover,
-.filter-buttons .secondary:focus {
+.filter-buttons__secondary:hover,
+.filter-buttons__secondary:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 
@@ -936,7 +933,22 @@ body {
 }
 
 /* PORTFOLIO CARDS */
-.card .card-link {
+
+.portfolio-cards {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: calc(-1 * var(--card-set-gap));
+  margin-left: calc(-1 * var(--card-set-gap));
+}
+
+.portfolio-cards__item {
+  background: var(--primary-white-color);
+  margin-top: var(--card-set-gap);
+  margin-left: var(--card-set-gap);
+  flex-basis: calc(100% / 3) - var(--card-set-gap);
+}
+.portfolio-cards__link {
   text-decoration: none;
   display: block;
 
@@ -945,54 +957,38 @@ body {
 
   transition: box-shadow var(--time-cubic);
 }
-
-.card {
-  background: var(--primary-white-color);
+.portfolio-cards__link:hover,
+.portfolio-cards__link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.cards-set img {
+.portfolio-cards__image {
   display: block;
   max-width: 100%;
   height: auto;
 }
-.cards-set {
-  display: flex;
-  flex-wrap: wrap;
 
-  margin-top: calc(-1 * var(--card-set-gap));
-  margin-left: calc(-1 * var(--card-set-gap));
-}
-
-.cards-set > .card {
-  margin-top: var(--card-set-gap);
-  margin-left: var(--card-set-gap);
-  flex-basis: calc(100% / 3) - var(--card-set-gap);
-}
-.card-box {
+.portfolio-cards__textbox {
   padding: 20px 24px;
 
   border: 1px solid var(--border-color);
 }
-.card-title {
+.portfolio-cards__label {
   margin-bottom: 4px;
   color: var(--title-text-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.card .description {
+.portfolio-cards__text {
   font-size: 16px;
   line-height: 1.87;
   color: var(--primary-text-color);
 }
-.cards-set .card-link:hover,
-.cards-set .card-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
 
 /* Позиціонування Card-set при HOVER*/
-.card-actions {
+.portfolio-cards__content {
   position: relative;
   overflow: hidden;
 
@@ -1000,7 +996,7 @@ body {
   height: 294px;
 }
 
-.text-hover {
+.card-overlay__text {
   position: absolute;
   width: 100%;
   color: var(--primary-white-color);
@@ -1020,8 +1016,9 @@ body {
   opacity: 0;
 }
 
-.card-hover:hover .text-hover,
-.card-hover:focus .text-hover {
+/* при hover виїжджає текст */
+.portfolio-cards__link:hover .card-overlay__text,
+.portfolio-cards__link:focus .card-overlay__text {
   opacity: 1;
 }
 
@@ -1039,8 +1036,8 @@ body {
   opacity: 0;
 }
 
-.card-hover:hover .card-overlay,
-.card-hover:focus .card-overlay {
+.portfolio-cards__link:hover .card-overlay,
+.portfolio-cards__link:focus .card-overlay {
   transform: translate(0);
   opacity: 1;
 }
