@@ -1,0 +1,41 @@
+.feautures__description {
+  margin-top: var(--card-set-gap);
+}
+
+.features {
+  display: flex;
+}
+.features__item {
+  flex-basis: calc((100%-90px) / 4);
+}
+
+.features__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.features__title {
+  margin-bottom: 10px;
+
+  color: var(--title-text-color);
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.features__review {
+  font-size: 14px;
+  line-height: 1.71;
+}
+/* Иконки */
+.features__icon-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 270px;
+  height: 120px;
+
+  background: var(--button-bgr-color);
+  border-radius: 4px;
+}

@@ -1,0 +1,39 @@
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  width: 206px;
+  justify-content: center;
+  text-align: center;
+}
+
+.social-icons__item {
+  width: 44px;
+  height: 44px;
+}
+.social-icons__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icons__link {
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.social-icons__link {
+  transition: color var(--time-cubic), background-color var(--time-cubic);
+}
+.social-icons__link:hover,
+.social-icons__link:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+.social-icons__symbol {
+  fill: currentColor;
+}
