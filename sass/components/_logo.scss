@@ -21,20 +21,20 @@
   color: var(--primary-black-color);
 
   transition: color var(--time-cubic);
-}
-.logo:hover,
-.logo:focus,
-.logo__text--black:focus,
-.logo__text--black:hover {
-  color: var(--accent-color);
+
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
 }
 
 .logo-footer {
   color: var(--primary-white-color);
 
   transition: color var(--time-cubic);
-}
-.logo-footer:hover,
-.logo-footer:focus {
-  color: var(--accent-color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }

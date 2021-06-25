@@ -1,11 +1,12 @@
 @import './utils/variables';
 @import './utils/reset';
+@import './utils/placeholder';
+@import './utils/mixin';
 @import './utils/visually-hidden';
 
 @import './base/container';
 @import './base/body';
 @import './base/section';
-@import './base/button';
 @import './base/animation-portfolio';
 
 @import './components/social-icons';

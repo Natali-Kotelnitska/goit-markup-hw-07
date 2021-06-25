@@ -3,6 +3,7 @@
 }
 
 .work-section__list {
+  @extend %list;
   display: flex;
 }
 .work-section__image {
@@ -11,25 +12,23 @@
 
 .work-section__thumb {
   position: relative;
+  display: flex;
 
   width: 370px;
   height: auto;
 
-  display: flex;
-}
-.work-section__thumb:not(:last-child) {
-  margin-right: var(--card-set-gap);
+  &:not(:last-child) {
+    margin-right: var(--card-set-gap);
+  }
 }
 
 .work-section__label {
   position: absolute;
   bottom: 0;
   height: 70px;
-
   width: 100%;
-  display: flex;
+  @include centeredFlex;
   justify-content: center;
-  align-items: center;
   text-align: center;
 
   font-weight: 700;

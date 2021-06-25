@@ -1,7 +1,8 @@
 .policy-field {
-  display: flex;
+  @include centeredFlex;
+
   flex-direction: row;
-  align-items: center;
+
   justify-content: center;
   margin-bottom: 30px;
 
@@ -11,7 +12,6 @@
   letter-spacing: 0.03em;
 
   cursor: pointer;
-
   color: var(--primary-text-color);
 }
 
@@ -24,6 +24,10 @@
   margin-right: 7px;
 
   transition: border-color var(--time-cubic), background-color var(--time-cubic);
+
+  .policy-field:focus-within > & {
+    border-color: var(--accent-color);
+  }
 }
 
 .policy-field__check-input {
@@ -38,17 +42,14 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-.policy-field__check-input:checked + .policy-field__icon {
-  background-color: var(--accent-color);
-  background-image: url(../images/icons/icon-check.svg);
-  background-size: contain;
-  background-origin: border-box;
-  border-color: transparent;
-}
 
-.policy-field:focus-within > .policy-field__icon {
-  border-color: var(--accent-color);
+  &:checked + .policy-field__icon {
+    background-color: var(--accent-color);
+    background-image: url(../images/icons/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: transparent;
+  }
 }
 
 .policy-field__link {

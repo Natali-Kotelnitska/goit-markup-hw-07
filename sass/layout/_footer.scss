@@ -6,7 +6,6 @@
 }
 
 .footer-box {
-  display: flex;
-  align-items: baseline;
+  @include centeredFlex(baseline);
   justify-content: space-between;
 }

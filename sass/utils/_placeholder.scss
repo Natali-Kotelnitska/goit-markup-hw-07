@@ -1,4 +1,10 @@
-.button {
+%list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+%button {
   color: var(--title-text-color);
   background-color: var(--button-bgr-color);
 
@@ -13,11 +19,11 @@
   margin: 0 auto;
 
   transition: color var(--time-cubic), background-color var(--time-cubic);
-}
 
-.button:hover,
-.button:focus,
-.button:active {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+  }
 }

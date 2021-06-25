@@ -1,10 +1,10 @@
 .footer-form {
   display: flex;
   flex-direction: column;
-}
 
-.footer-form__field {
-  display: flex;
+  &__field {
+    display: flex;
+  }
 }
 
 .footer-form__title {

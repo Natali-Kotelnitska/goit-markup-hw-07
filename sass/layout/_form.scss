@@ -36,21 +36,21 @@
   border-radius: 4px;
 
   transition: border-color var(--time-cubic);
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
 }
 
-.form-field__input:focus,
-.textarea-field textarea:focus {
-  outline: none;
-  border-color: var(--accent-color);
-}
-
-.form-field:focus-within > .form-icon {
-  fill: var(--accent-color);
-}
 .form-icon {
   position: absolute;
   top: 50%;
   left: 12px;
 
   transition: fill var(--time-cubic);
+
+  .form-field:focus-within > & {
+    fill: var(--accent-color);
+  }
 }

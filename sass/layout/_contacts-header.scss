@@ -1,17 +1,23 @@
 .contacts {
-  display: flex;
-  align-items: center;
+  @extend %list;
+  @include centeredFlex;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+    margin-left: auto;
+  }
 }
-.contacts__item:not(:last-child) {
-  margin-right: 50px;
-  margin-left: auto;
-}
+
 .contacts__link {
-  display: flex;
-  align-items: center;
+  @include centeredFlex;
 
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.contacts__icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 .contacts__tel,
@@ -25,19 +31,14 @@
   text-decoration: none;
 
   transition: color var(--time-cubic);
-}
-.contacts__icon {
-  fill: currentColor;
-  margin-right: 10px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--accent-color);
+  }
 }
 
-.contacts__email:hover,
-.contacts__email:focus,
-.contacts__email:active,
-.contacts__tel:hover,
-.contacts__tel:focus {
-  color: var(--accent-color);
-}
 .page-header--current {
   position: relative;
   color: var(--accent-color);

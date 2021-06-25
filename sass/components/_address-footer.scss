@@ -3,24 +3,29 @@
 
   font-style: inherit;
   font-weight: 400;
-}
-.address__text {
-  margin-bottom: 9px;
 
-  color: var(--primary-white-color);
-  font-size: 14px;
-  line-height: 24px;
+  &__text {
+    margin-bottom: 9px;
+
+    color: var(--primary-white-color);
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__item {
+    margin-bottom: 9px;
+  }
 }
-.address__item {
-  margin-bottom: 9px;
+.address-list {
+  @extend %list;
 }
 .address__link {
   color: var(--address-link-color);
   text-decoration: none;
 
   transition: color var(--time-cubic);
-}
-.address__link:hover,
-.address__link:focus {
-  color: var(--accent-color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }

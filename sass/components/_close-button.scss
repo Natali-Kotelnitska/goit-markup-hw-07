@@ -3,8 +3,8 @@
   right: 14px;
   top: 14px;
 
-  display: flex;
-  align-items: center;
+  @include centeredFlex;
+
   justify-content: center;
   padding: 6px;
 
@@ -19,11 +19,13 @@
   cursor: pointer;
 
   transition: color var(--time-cubic);
-}
-.modal-btn:hover,
-.modal-btn:focus {
-  color: var(--accent-color);
-}
-.modal-btn__cross-icon {
-  fill: currentColor;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &__cross-icon {
+    fill: currentColor;
+  }
 }
