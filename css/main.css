@@ -17,7 +17,7 @@
   --input-textarea-border: rgba(33, 33, 33, 0.2);
   --button-shadow: rgba(0, 0, 0, 0.15);
   --card-set-gap: 30px;
-  --time-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --time-cubic: 1250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -106,10 +106,10 @@ body {
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-transition: -webkit-transform var(--time-cubic);
-  transition: -webkit-transform var(--time-cubic);
-  transition: transform var(--time-cubic);
-  transition: transform var(--time-cubic), -webkit-transform var(--time-cubic);
+  -webkit-transition: opacity var(--time-cubic), -webkit-transform var(--time-cubic);
+  transition: opacity var(--time-cubic), -webkit-transform var(--time-cubic);
+  transition: transform var(--time-cubic), opacity var(--time-cubic);
+  transition: transform var(--time-cubic), opacity var(--time-cubic), -webkit-transform var(--time-cubic);
   opacity: 0;
 }
 
@@ -118,6 +118,10 @@ body {
   -webkit-transform: translate(0);
           transform: translate(0);
   opacity: 1;
+  -webkit-transition: opacity var(--time-cubic), -webkit-transform var(--time-cubic);
+  transition: opacity var(--time-cubic), -webkit-transform var(--time-cubic);
+  transition: transform var(--time-cubic), opacity var(--time-cubic);
+  transition: transform var(--time-cubic), opacity var(--time-cubic), -webkit-transform var(--time-cubic);
 }
 
 .card-overlay__text {
@@ -142,6 +146,10 @@ body {
 .portfolio-cards__link:hover .card-overlay__text,
 .portfolio-cards__link:focus .card-overlay__text {
   opacity: 1;
+  -webkit-transition: opacity var(--time-cubic), -webkit-transform var(--time-cubic);
+  transition: opacity var(--time-cubic), -webkit-transform var(--time-cubic);
+  transition: transform var(--time-cubic), opacity var(--time-cubic);
+  transition: transform var(--time-cubic), opacity var(--time-cubic), -webkit-transform var(--time-cubic);
 }
 
 .social-icons {
@@ -383,6 +391,7 @@ body {
 
 .textarea-field__textzone {
   resize: none;
+  height: 120px;
   padding: 12px 16px;
   border: 1px solid var(--input-textarea-border);
   border-radius: 4px;
@@ -437,13 +446,16 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.71;
   /* identical to box height, or 171% */
   letter-spacing: 0.03em;
   cursor: pointer;
   color: var(--primary-text-color);
+}
+
+.policy--margin {
+  margin-bottom: 30px;
 }
 
 /* checkbox mark */

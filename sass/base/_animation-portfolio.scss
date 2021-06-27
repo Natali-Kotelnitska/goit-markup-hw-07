@@ -7,15 +7,17 @@
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(+100%);
-  transition: transform var(--time-cubic);
+  transition: transform var(--time-cubic), opacity var(--time-cubic);
 
   opacity: 0;
 
   .portfolio-cards__link:hover &,
   .portfolio-cards__link:focus & {
     transform: translate(0);
+
     opacity: 1;
-  } 
+    transition: transform var(--time-cubic), opacity var(--time-cubic);
+  }
 }
 
 .card-overlay__text {
@@ -39,5 +41,13 @@
   .portfolio-cards__link:hover &,
   .portfolio-cards__link:focus & {
     opacity: 1;
+
+    transition: transform var(--time-cubic), opacity var(--time-cubic);
   }
 }
+// .portfolio-cards__link .card-overlay {
+//   visibility: hidden;
+//   opacity: 0;
+
+//   transition: opacity var(--time-cubic), visibility var(--time-cubic);
+// }
